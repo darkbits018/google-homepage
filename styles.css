@@ -1,25 +1,75 @@
-#navBar{
+:root {
+    --color-white: #ffffff;
+    --color-gray-100: #d0d0d0;
+    --color-gray-200: #c0c0c0;
+    --color-gray-300: #b8b8b8;
+    --color-gray-400: #a9a9a9;
+    --color-gray-500: #707070;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-white);
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+}
+
+.page_container {
+    margin: 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #5f6368;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#navBar {
     position: fixed;
     top: 16px;
     width: 100%;
     min-width: 980px;
     z-index: 103;
 }
-#navR{
+
+#navR {
     float: right;
     display: flex;
     align-items: center;
     padding: 0 30px;
 }
-#navRlinks{
+
+#navRlinks {
     display: inline-block;
     vertical-align: middle;
     padding-right: 15px;
 }
-#imageL{
+
+#imageL {
     padding: 15px;
 }
-#GApps{
+
+#GApps {
     display: inline-block;
     background-image: url(https://ssl.gstatic.com/gb/images/i1_1967ca6a.png);
     background-position-x: -132px;
@@ -32,7 +82,8 @@
     width: 30px;
     vertical-align: middle;
 }
-#signin{
+
+#signin {
     padding-left: 15px;
     display: inline-block;
     border: 1px solid #4285f4;
@@ -40,7 +91,7 @@
     outline: none;
     cursor: default;
     color: #ffffff;
-    background: -webkit-linear-gradient(top,#4387fd,#4683ea);
+    background: -webkit-linear-gradient(top, #4387fd, #4683ea);
     border-radius: 2px;
     line-height: 28px;
     padding: 0 12px;
@@ -49,7 +100,8 @@
     font-size: 13px;
     margin-left: 15px;
 }
-.navi-links{
+
+.navi-links {
     cursor: pointer;
     color: #000000;
     opacity: 0.75;
@@ -57,27 +109,124 @@
     font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.navi-links:hover{
+
+.navi-links:hover {
     text-decoration: underline;
 }
-#logo{
-    padding-top: 109px;
-    height: 92px;
-    width: 272px;
-}
-#content{
-    height: 233px;
-    margin-top: 89px;
+
+.main {
     text-align: center;
+    margin-top: 30px;
+    flex: 1;
 }
-#voiceSearch{
-    background: url(htpps://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png)0 0 no-repeat;
+
+.main_hero {
+    padding-top: 109px;
+}
+
+.main_input {
+    margin-top: 30px;
+    position: relative;
+}
+
+.main_form {
+    max-width: 584px;
+    margin: 0 auto;
+}
+
+.form_group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 44px;
+    width: 100%;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    padding: 5px 8px 0 16px;
+}
+
+.form_group:hover {
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+    border-color: rgba(223, 225, 229, 0);
+}
+
+.form_logo--search {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5px;
+    margin-right: 7px;
+}
+
+.form_logo--search svg {
+    height: 20px;
+    width: 20px;
+    fill: var(--color-gray-400);
+}
+
+.form_input {
+    height: 100%;
+    flex: 1;
+}
+
+.form_input input {
+    outline: none;
+    border-width: 0px;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    margin-top: -3px;
+    color: #101010;
+}
+
+.form_logo--mic {
+    height: 100%;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5px;
+    margin-right: 7px;
+}
+
+.form_logo--mic svg {
     height: 24px;
-    background-size: cover;
     width: 24px;
-    vertical-align: middle;
 }
-#footer{
+
+.main_submit {
+    margin-top: 25px;
+}
+
+.main_submit button {
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    color: #5f6368;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    justify-content: center;
+}
+
+.main_submit button:hover {
+    box-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
+    background-color: #f8f8f8;
+    border: 1px solid #c6c6c6;
+    color: #222;
+}
+
+#footer {
     position: absolute;
     bottom: 0px;
     left: 0;
@@ -88,97 +237,35 @@
     background-color: #f2f2f2;
     border-top: 1px solid #e4e4e4;
 }
-.footerlinks{
+
+.footerlinks {
     color: rgb(95, 99, 104);
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
 }
-#footerL{
+
+#footerL {
     float: left;
     margin-left: 30px;
 }
-#footerR{
+
+#footerR {
     float: right;
     margin-right: 30px;
 }
-#footerL a{
+
+#footerL a {
     padding-left: 27px;
 }
-#footerR a{
+
+#footerR a {
     padding-right: 27px;
 }
-.footerlinks:hover{
+
+.footerlinks:hover {
     text-decoration: underline;
 }
-a:visited{
+
+a:visited {
     color: #660099;
-}
-#sideSeparation{
-    flex: 1;
-    display: flex;
-    padding-top: 5px;
-    padding-right: 8px;
-    padding-left: 20px;
-}
-#voiceIpCont{
-    padding: 0 8px;
-    width: 24px;
-    line-height: 44px;
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    flex: 1 0 auto;
-    cursor: pointer;
-}
-.searchBorder{
-    display: flex;
-    background: #ffffff;
-    height: 44px;
-    border-radius: 24px;
-    z-index: 3;
-    margin-top: 20px;
-    width: 482px;
-}
-.searchBorder:hover{
-    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
-    border-color: rgba(223, 225, 229, 0);
-}
-.searchBar{
-    display: flex;
-    flex: 100%;
-    color: rgba(0, 0, 0, 0.87);
-    border: rgb(95, 99, 104);
-    font: 16px arial, sans-serif;
-    line-height: 34px;
-    height: 34px;
-    height: 34px !important;
-    cursor: text;
-    word-wrap: break-word;
-    outline: rgb(95, 99, 104);
-} 
-.searchBar:focus{
-    outline: none;
-}
-.buttonRegion{
-    height: 70px;
-    padding-top: 18px;
-    width: 487px;
-    z-index: 0;
-}
-.searchButton{
-    height: 36px;
-    line-height: 27px;
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(242, 242, 242);
-    border-radius: 4px;
-    border: 1px solid rgb(242, 242, 242);
-    margin: 11px 4px;
-    min-width: 54px;
-    padding: 0 16px;
-    align-items: center;
-    text-align: center;
-    display: inline-block;
-    color: rgb(95, 99, 104);
-    cursor: pointer;
 }

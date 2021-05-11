@@ -269,3 +269,19 @@ a:hover {
 a:visited {
     color: #660099;
 }
+@media (max-width: 584px) {
+    .main_form {
+        width: 100%;
+    }
+    .main_input {
+        padding: 0 30px;
+    }
+}
+@media (max-width: 425px) {
+    .main_input {
+        padding: 0 15px;
+    }
+    .main_hero img {
+        width: 220px;
+    }
+}
